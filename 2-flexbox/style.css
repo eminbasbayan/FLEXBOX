@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Akaya Telivigala', cursive;
+    background-color: #E7D2CD;
+}
+
+
+.container {
+    display: flex;
+    padding: 16px;
+}
+
+.box {
+    flex: 1;
+    margin-right: 16px;
+    width: 0;
+}
+
+.list {
+    border: 1px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+}
+
+.list .title {
+    background-color: #C455A8;
+    color: #fff;
+    font-size: 30px;
+}
+
+.list li {
+    background-color: #CF8BA3;
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.list .custom-color {
+    background-color: #D7A6B3;
+}
+
+
+button {
+    background-color: #E5CDC8;
+    border: none;
+    border-radius: 25px;
+    color: pointer;
+    padding: 12px 70px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.box:hover .list .custom-color {
+    background-color: #7364bf;
+    transition: .9s;
+}
+
+.box:hover .list .title {
+    background-color: #963E7F;
+    transition: .9s;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    button {
+        padding: 12px 60px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .box {
+        flex: 0 0 100%;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+
+    .list:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+    button {
+        padding: 12px 24px;
+    }
+}
